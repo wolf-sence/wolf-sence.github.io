@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.BQmytedh.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"js/gc.md","filePath":"js/gc.md","lastUpdated":null}'),s={name:"js/gc.md"};function c(r,o,n,d,p,_){return a(),t("div")}const m=e(s,[["render",c]]);export{l as __pageData,m as default};
