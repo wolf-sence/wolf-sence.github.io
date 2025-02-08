@@ -4,10 +4,25 @@ import { defineConfig } from "vitepress";
 const originJsBar = {
   text: '原生JS',
   items: [
-    { text: "script标签", link: "/js/script"},
     { text: "事件循环evenloop", link: "/js/evenloop"},
     { text: "垃圾回收GC", link: "/js/gc"},
     { text: "监听元素是否出现在视口", link: "/js/intersectionobserver"}
+  ]
+}
+
+const originDomBar = {
+  text: "原生DOM",
+  items: [
+    { text: "原生dom相关知识点", link: "/dom/dom"},
+    { text: "script标签", link: "/dom/script"},
+  ]
+}
+
+const originBar = {
+  text: "原生相关",
+  items: [
+    originJsBar,
+    originDomBar,
   ]
 }
 
@@ -23,10 +38,10 @@ const exampleBar = {
 export default defineConfig({
   title: "wolf2gang blog",
   description: "simple blog",
-  outDir: "./docs",
+  outDir: "./dist",
   lastUpdated: true,
   head: [
-    ['link', { rel: 'icon', href: 'http://imgcdn.somebodyelse.cn/blog-imgs/wolf.png' }]
+    ['link', { rel: 'shortcut icon', href: 'https://imgcdn.somebodyelse.cn/wolf2gang/wolf2gang.ico' }]
   ],
   themeConfig: {
     i18nRouting: false,
@@ -53,13 +68,13 @@ export default defineConfig({
           },
         ],
       },
-      originJsBar,
+      originBar,
       exampleBar,
     ],
 
     sidebar: [
+      originBar,
       exampleBar,
-      originJsBar,
     ],
 
     socialLinks: [
