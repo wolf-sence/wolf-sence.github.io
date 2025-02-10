@@ -1,28 +1,30 @@
 import { defineConfig } from "vitepress";
 
-
-const originJsBar = {
-  text: '原生JS',
+const uselessBar = {
+  text: "经典八股文",
   items: [
-    { text: "事件循环evenloop", link: "/js/evenloop"},
-    { text: "垃圾回收GC", link: "/js/gc"},
-    { text: "监听元素是否出现在视口", link: "/js/intersectionobserver"}
-  ]
-}
+    {
+      text: '原生js',
+      items: [
+        {
+          text: "八股文杂项",
+          link: '/document/useless/js/js'
+        },
+        {
+          text: "监听元素是否出现在视口",
+          link: "/document/useless/js/intersectionobserver"
+        },
+        { text: "事件循环evenloop", link: "/document/useless/js/evenloop"},
+      ],
+    },
+    {
+      text: "原生DOM",
+      items: [
+        { text: "原生dom相关知识点", link: "/document/useless/dom/dom"},
+        { text: "script标签", link: "/document/useless/dom/script"},
+      ]
+    }
 
-const originDomBar = {
-  text: "原生DOM",
-  items: [
-    { text: "原生dom相关知识点", link: "/dom/dom"},
-    { text: "script标签", link: "/dom/script"},
-  ]
-}
-
-const originBar = {
-  text: "原生相关",
-  items: [
-    originJsBar,
-    originDomBar,
   ]
 }
 
@@ -68,13 +70,12 @@ export default defineConfig({
           },
         ],
       },
-      originBar,
+      uselessBar,
       exampleBar,
     ],
 
     sidebar: [
-      originBar,
-      exampleBar,
+      uselessBar,
     ],
 
     socialLinks: [

@@ -1,4 +1,4 @@
-#监听元素是否在视口
+# 监听元素是否在视口
 
 ## 前置概念
 - 获取视口尺寸：`window.innerHeight/innerWidth`,由于浏览器差异在ie6/7/8内需使用`document.documentElement.clientHeight/clientWidth`
@@ -6,8 +6,6 @@
 
 ## 方法一 getBoundingClientRect
 > api文档可见[此处](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect)
-
-
 
 
 getBoundingClientRect的定位是相对视口定位，即判断相对视口的距离减去视口高度即可获知其是否在视口内
