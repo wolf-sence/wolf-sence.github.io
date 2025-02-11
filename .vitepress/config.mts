@@ -11,10 +11,9 @@ const uselessBar = {
           link: '/document/useless/js/js'
         },
         {
-          text: "监听元素是否出现在视口",
-          link: "/document/useless/js/intersectionobserver"
+          text: "场景题",
+          link: "/document/useless/js/scene"
         },
-        { text: "事件循环evenloop", link: "/document/useless/js/evenloop"},
       ],
     },
     {
@@ -23,8 +22,11 @@ const uselessBar = {
         { text: "原生dom相关知识点", link: "/document/useless/dom/dom"},
         { text: "script标签", link: "/document/useless/dom/script"},
       ]
+    },
+    {
+      text: "从url输入到页面展示",
+      link: "/document/useless/js/broswer"
     }
-
   ]
 }
 

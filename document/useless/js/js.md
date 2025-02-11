@@ -71,7 +71,56 @@ obj.say1() // global
 obj.in.say2() // in
 obj.in.say3() // global
 obj.in.say4() // in
+```
 
+## 事件循环 (Event Loop)
+
+### 事件循环的执行顺序
+
+先执行一个宏任务，执行过程中如果产出新的宏/微任务，就将他们推入相应的任务队列，
+
+在一次宏任务执行完成后，会先执行微任务队列，直至清空所有微任务队列，然后执行宏任务
+
+以上不断重复的过程就叫做 Event Loop(事件循环)。
+
+### 宏任务和微任务
+
+如何区分两者？宿主运行环境发起的就是`宏任务`，如由node/浏览器发起的的setTimeout/setInterval; 由语言标准内api发起的就是`微任务`，如：Promise.then/catch/finally;
+
+#### 宏任务 (Macrotask)
+- script内的整体代码
+- setTimeout/setInterval
+- setImmediate (Node.js)
+- requestAnimationFrame
+- I/O
+- UI 渲染
+
+#### 微任务 (Microtask)
+- Promise.then/catch/finally
+- process.nextTick (Node.js)
+- MutationObserver
+- queueMicrotask()
+
+### 代码示例
+
+```javascript
+console.log("script start");
+
+setTimeout(function () {
+  console.log("setTimeout");
+}, 0);
+
+Promise.resolve()
+  .then(function () {
+    console.log("promise1");
+  })
+  .then(function () {
+    console.log("promise2");
+  });
+
+console.log("script end");
+
+// script start, script end, promise1, promise2, setTimeout
 ```
 
 ## WEB安全问题

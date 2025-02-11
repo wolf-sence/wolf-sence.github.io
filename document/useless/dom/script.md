@@ -6,7 +6,7 @@ HTML5规范要求脚本按照它们出现的先后顺序执行，因此第一个
 
 > 加载顺序可参考[script标签加载顺序](https://juejin.cn/post/6913156226008711182)
 
-![script标签加载顺序](http://imgcdn.somebodyelse.cn/blog-imgs/origin-js/origin-script/v2-script1.jpg)
+![script标签加载顺序](https://imgcdn.somebodyelse.cn/blog-imgs/origin-js/origin-script/v2-script1.jpg)
 
 
 ### 无属性
