@@ -34,7 +34,15 @@ const uselessBar = {
     {
       text: 'js垃圾回收gc',
       link: '/document/useless/js/gc'
-    }
+    },
+    {
+      text: '白屏问题',
+      link: '/document/useless/js/white'
+    },
+    {
+      text: '性能优化',
+      link: '/document/useless/js/render'
+    },
   ]
 }
 
