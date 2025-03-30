@@ -26,9 +26,28 @@ const uselessBar = {
     {
       text: "从url输入到页面展示",
       link: "/document/useless/js/broswer"
+    },
+    {
+      text: "http/缓存/跨域",
+      link: "/document/useless/js/http"
+    },
+  ]
+}
+
+const techBar = {
+  text: '技术方案',
+  items: [
+    {
+      text: '小程序构建工具',
+      link: '/document/tools/mp-build'
+    },
+    {
+      text: '微前端方案',
+      link: '/document/tools/micro-frontend'
     }
   ]
 }
+
 
 const exampleBar = {
   text: "示例",
@@ -72,11 +91,13 @@ export default defineConfig({
           },
         ],
       },
+      techBar,
       uselessBar,
       exampleBar,
     ],
 
     sidebar: [
+      techBar,
       uselessBar,
     ],
 
