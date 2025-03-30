@@ -31,6 +31,10 @@ const uselessBar = {
       text: "http/缓存/跨域",
       link: "/document/useless/js/http"
     },
+    {
+      text: 'js垃圾回收gc',
+      link: '/document/useless/js/gc'
+    }
   ]
 }
 
