@@ -24,6 +24,13 @@ const uselessBar = {
       ]
     },
     {
+      text: 'vue',
+      items: [
+        { text: "vue杂项", link: "/document/useless/vue/vue"},
+        { text: "vue的响应式", link: "/document/useless/vue/Responsive"},
+      ]
+    },
+    {
       text: "从url输入到页面展示",
       link: "/document/useless/js/broswer"
     },

@@ -155,3 +155,30 @@ for (var i = 0; i < 4; i++) {
     }, 300, i); // 第三个参数 i 会作为回调函数的第一个参数 j 传入
 }
 ```
+
+## 数组打平
+### flat
+```javascript
+const arr = ["1", ["2", "3"], ["4", ["5", ["6"]], "7"]];
+arr.flat(); // ["1", "2", "3", "4", ["5", ["6"]], "7"]
+```
+不传参数时默认拉平一层，可以传入Infinity，可以拉平无数层
+> 有空位元素会被消除
+
+### toString
+```javascript
+const arr = [1, [2, 3], [4, [5, [6]], 7]];
+arr.toString().split(',').map(item) => Number(item);
+```
+仅支持单数字元素
+### concat
+```javascript
+const flatten = (list) => [].concat(...list);
+```
+基于concat特性，只能拍平一层
+### reduce+concat
+```javascript
+const flatten = (list) =>
+  list.reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []);
+```
+深层拍平
