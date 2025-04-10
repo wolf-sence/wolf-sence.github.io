@@ -14,7 +14,7 @@
 不好完美判断，根节点下有dom也有可能是白屏
 
 ### onerror
-使用`window.onerror`来监听js执行错误
+使用window.onerror, window.onunhandledrejection, 来监听js执行错误
 
 ### 检测根节点
 在基于spa引用下，可以检测根节点来判断是否加载内容

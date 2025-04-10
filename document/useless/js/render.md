@@ -47,6 +47,7 @@
         *   **利用浏览器标准 API:** 使用 `PerformanceObserver` 监听 LCP, CLS, FID/INP, FCP, Long Tasks, Resource Timing 等指标。结合 `navigator.connection` 获取网络信息。
         *   **数据采集与上报:** 编写轻量级脚本采集这些指标数据，并将其聚合后定期上报到后端日志系统或专门的监控平台。需要注意采样率和上报策略，避免影响页面本身性能。
         *   **第三方 RUM 服务/平台:** 可以选择集成成熟的第三方服务，如 Sentry (结合错误监控), Datadog RUM, Dynatrace, ARMS (阿里云) 等。它们提供了完善的数据采集、分析和可视化功能。
+        *  使用 window.onerror, window.onunhandledrejection, Reporting API。监控控制台错误
 
 **3. 将监控融入开发全流程 (When & Where to Monitor):**
 

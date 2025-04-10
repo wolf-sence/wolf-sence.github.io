@@ -50,6 +50,10 @@ const uselessBar = {
       text: '性能优化',
       link: '/document/useless/js/render'
     },
+    {
+      text: '进程与渲染',
+      link: '/document/useless/js/thread'
+    }
   ]
 }
 
